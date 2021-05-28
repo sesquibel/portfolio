@@ -1,12 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Playfair+Display:ital@1&display=swap');
+
 * {
 	box-sizing: border-box;
 }
 
 html {
+    font-family: 'Noto Serif';
 	font-size: 16px;
+    color: #333;
 }
 
 body {
+    background-image: url('/assets/rose-white_topography-background-img.svg');
+	background-size: cover;
+    background-repeat: no-repeat;
+
 	display: grid;
 	height: 100vh;
 	gap: 0;
@@ -16,19 +24,22 @@ body {
     "main"
     "footer";
 }
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans';
+}
 
 li {
 	list-style: none;
 }
 
 a {
-	color: #2f5d62;
+	color: #fff;
 	text-decoration: none;
 }
 
 a:hover {
 	font-size: 1.5rem;
-	color: #333;
+	color: #5A5675;
 }
 
 header {
@@ -52,14 +63,49 @@ nav li {
 }
 
 main {
-	background-color: #fff;
 	grid-area: "main";
 }
 
 #splash {
-	background-image: url('/assets/desktop\ flatlay\ computer\ planner\ -\ splash.png');
-	background-size: cover;
-	height: 500px;
+	/* background-image: url('/assets/rose-white_topography-background-img.svg');
+	background-size: cover; */
+    height: 500px; 
+
+    display: flex;
+    align-items: center;
+    padding-left: 225px;
+}
+
+#projects {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: #F5B882;
+    border: 1px solid #F5B890;
+    border-radius: 10px;
+
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+
+    height: 300px;
+    width: 400px;
+}
+
+.card:hover {
+    background-color: #fff;
+    opacity: 0.5;
+}
+
+.card-header {
+    border-bottom: 1px solid #fff;
+    padding: 10px;
 }
 
 footer {
