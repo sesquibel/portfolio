@@ -1,41 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Color Pallet:
+    White: #f4f1d6;
+    Black: #333;
+    Purple: #34385e;
+    Dark Blue: #090979;
+*/
 
 * {
 	box-sizing: border-box;
 }
 
 html {
-  font-family: 'Cabin';
+  font-family: 'Open Sans';
 	font-size: 16px;
-  color: #34385e;
+    color: #f4f1d6;
 }
 
 body {
-  background-image: url('/assets/rose-white_topography-background-img.svg');
-	background-size: cover;
-  background-repeat: no-repeat;
+    background: #0D5D82;
+    background-size: cover;
+    background-repeat: no-repeat;
 
 	display: grid;
-	height: 100vh;
-	gap: 0;
-	grid-template-rows: 50px 1fr 300px;
+	grid-template-rows: 150px 1fr 300px;
 	grid-template-areas:
     "header"
     "main"
     "footer";
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto';
+.white {
+    color: #f4f1d6;
 }
 
-h1 {
-	font-size: 4rem;
-	letter-spacing: 0.1rem;
+.black {
+    color: #333;
+}
+
+.purple {
+    color: #34385e;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway';
 }
 
 h2 {
-	padding-left: 30px;
+	text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    margin-bottom: 75px;
 }
 
 li {
@@ -44,21 +58,13 @@ li {
 
 a {
 	font-size: 1.5rem;
-	color: #fff;
+	color: #f4f1d6;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #5A5675;
-}
-
-a:active {
-	color:#F5B890;
-	font-size: 1.5rem;
-}
-
-a:visited {
-	color: #f8f8ff;
+	color: #CFC715;
+    cursor: pointer;
 }
 
 header {
@@ -68,14 +74,15 @@ header {
 	padding: 10px;
 }
 
-header div {
-	font-size: 1.5rem;
+#logo img {
+	max-height: 125px;
 }
 
 nav {
 	display: flex;
 	justify-content: end;
 	align-items: center;
+    padding-right: 100px;
 }
 
 nav li {
@@ -84,13 +91,33 @@ nav li {
 
 main {
 	grid-area: "main";
+
+    display: grid;
+	grid-template-rows: 700px 500px 500px;
+	grid-template-areas:
+    "hero"
+    "projects"
+    "about";
 }
 
-#splash {
-    height: 700px;
+#hero {
+    grid-area: "hero";
 }
 
-#splash h1 {
+#hero h1 {
+	font-size: 4rem;
+    font-weight: normal;
+	letter-spacing: 0.1rem;
+    margin-bottom: 0;
+}
+
+#hero p {
+    font-size: 2rem;
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+}
+
+#hero-text {
 	position: absolute;
 	top: 200px;
 	left: 125px;
@@ -98,8 +125,8 @@ main {
 
 #down-arrow {
 	position: absolute;
-	bottom: 100px;
-	left: 850px;
+	bottom: 125px;
+	left: 750px;
 
 	animation: 750ms infinite alternate bounce; 
 }
@@ -110,19 +137,19 @@ main {
 }
 
 #projects {
-	padding: 25px;
-	margin-top: 300px;
+    grid-area: "projects";
 }
 
 #project-card-deck {
     display: flex;
-	flex-wrap: wrap; 
-    justify-self: center;
+	flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .card {
-    background-color: #F5B882;
-    border: 1px solid #F5B890;
+    background-color: #34385e;
+    color: #f4f1d6;
+    border: 1px solid #333;
     border-radius: 10px;
 
     box-shadow:
@@ -133,30 +160,34 @@ main {
     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12);
 
-    height: 200px;
-    width: 300px;
-	margin: 15px;
+    height: 300px;
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    text-align: center;
 }
 
-.card-body:hover {
-    background-color: #fff;
+.card:hover {
+    background-color: #f4f1d6;
+    color: #333;
     opacity: 0.5;
 }
 
-.card header {
-    border-bottom: 1px solid #34385e;
-    padding: 0 25px 16px;
+.card h3 {
+    margin-bottom: 0;
+    font-size: 2rem;
 }
 
-.card-body {
-	display: flex;
-	align-items: center;
-	padding: 25px;
-	height: 50%;
+.card p {
+    color: rgb(122, 131, 2);
 }
 
-.card-img {
-	max-width: 100%;
+#about {
+    grid-area: "about";
 }
 
 footer {
