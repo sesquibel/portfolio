@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Patrick+Hand&display=swap');
 /* Color Pallet:
     White: #f4f1d6;
     Black: #333;
@@ -11,37 +12,32 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans';
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans';
 	font-size: 16px;
-    color: #f4f1d6;
-    background: #0D5D82;
-    background-size: cover;
-    background-repeat: no-repeat;
+	color: #F1F1EE;
+	background: #0D5D82;
+	background-size: cover;
+	background-repeat: no-repeat;
 
 	display: grid;
-	grid-template-rows: 150px 1fr 500px;
+	grid-template-rows: 150px 1fr 900px;
 	grid-template-areas:
     "header"
     "main"
     "footer";
 }
 
-.white {
-    color: #f4f1d6;
-}
-
-.black {
-    color: #333;
-}
-
-.purple {
-    color: #34385e;
-}
-
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Raleway';
+  font-family: 'Raleway';
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.3rem;
+	margin: 75px 0;
 }
 
 li {
@@ -50,14 +46,14 @@ li {
 
 a {
 	font-size: 1.5rem;
-	color: #f4f1d6;
+	color: #F1F1EE;
 	text-decoration: none;
 }
 
 a:hover {
 	color: #CFC715;
-    font-style: italic;
-    cursor: pointer;
+	font-style: italic;
+	cursor: pointer;
 }
 
 header {
@@ -75,7 +71,7 @@ nav {
 	display: flex;
 	justify-content: end;
 	align-items: center;
-    padding-right: 100px;
+  padding-right: 100px;
 }
 
 nav li {
@@ -85,8 +81,8 @@ nav li {
 main {
 	grid-area: "main";
 
-    display: grid;
-	grid-template-rows: 700px 700px 700px;
+  display: grid;
+	grid-template-rows: 800px 1000px 1000px;
 	grid-template-areas:
     "hero"
     "projects"
@@ -94,20 +90,20 @@ main {
 }
 
 #hero {
-    grid-area: "hero";
+  grid-area: "hero";
 }
 
 #hero h1 {
 	font-size: 4rem;
-    font-weight: normal;
+	font-weight: normal;
 	letter-spacing: 0.1rem;
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 #hero p {
-    font-size: 2rem;
-    font-weight: normal;
-    letter-spacing: 0.1rem;
+	font-size: 2rem;
+	font-weight: normal;
+	letter-spacing: 0.1rem;
 }
 
 #hero-text {
@@ -119,7 +115,7 @@ main {
 #down-arrow {
 	position: absolute;
 	bottom: 125px;
-	left: 750px;
+	left: 900px;
 
 	animation: 750ms infinite alternate bounce; 
 }
@@ -129,118 +125,133 @@ main {
   to { transform: translate3d(0, 25px, 0);}
 }
 
-#bio {
-    display: flex; 
-    padding: 50px;  
-}
-
-#bio-img {
-    display: flex;
-    justify-content: center;
-    width: 35%;
-}
-
-#bio-img img {
-    border-radius: 50%;
-    border: 1px solid #333;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    max-width: 65%;
-}
-
-#bio-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 2;
-    letter-spacing: 0.2rem;
-    width: 65%;
-    padding-right: 50px;
-}
-
-#bio-text h3 {
-    font-size: 3rem;
-    font-weight: 200;
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
-#bio-text p {
-    font-weight: 100;
-}
-
 #projects {
-    grid-area: "projects";
+	grid-area: "projects";
+	background-color: #F1F1EE; 
 }
 
 #projects h2 {
-	text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
-    margin-bottom: 75px;
+	color: #0D5D82;
 }
 
 #project-card-deck {
-    display: flex;
+	display: flex;
 	flex-wrap: wrap;
-    justify-content: space-around;
+	justify-content: center;
 }
 
 .card {
-    background-color: #34385e;
-    color: #f4f1d6;
-    border: 1px solid #333;
-    border-radius: 10px;
+	background-color: #34385e;
+	color: #F1F1EE;
+	border: 1px solid #333;
+	border-radius: 10px;
 
-    box-shadow:
-    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-    0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12);
+	box-shadow:
+	0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+	0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+	0 12.5px 10px rgba(0, 0, 0, 0.06),
+	0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+	0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+	0 100px 80px rgba(0, 0, 0, 0.12);
 
-    height: 300px;
-    width: 400px;
+	height: 300px;
+	width: 400px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 25px;
-    text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 25px;
+	margin: 20px;
+	text-align: center;
 }
 
 .card:hover {
-    background-color: #f4f1d6;
-    color: #333;
-    opacity: 0.5;
+	background-color: #F1F1EE;
+	color: #333;
+	opacity: 0.5;
 }
 
 .card h3 {
-    margin-bottom: 0;
-    font-size: 2rem;
+	margin-bottom: 0;
+	font-size: 2rem;
 }
 
 .card p {
-    color: rgb(122, 131, 2);
+	color: rgb(122, 131, 2);
 }
 
 #about {
-    grid-area: "about";
+	grid-area: "about";
+}
+
+#bio {
+	display: flex; 
+	padding: 50px; 
+}
+
+#about h2, #contact h2 {
+	color: #CFC715;
+}
+
+#bio-img {
+	display: flex;
+	justify-content: center;
+	width: 35%;
+}
+
+#bio-img img {
+	box-shadow: 
+	rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+	rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+	rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+	rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+	rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	max-width: 65%;
+}
+
+#bio-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	line-height: 2;
+	letter-spacing: 0.2rem;
+	width: 65%;
+	padding-right: 50px;
+}
+
+#bio-text h3 {
+	font-size: 3rem;
+	font-weight: 200;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+#bio-text p {
+  font-weight: 100;
+}
+
+#about {
+  grid-area: "about";
 }
 
 footer {
 	grid-area: "footer";
-    text-align: center;
-    padding: 0 300px;
+	text-align: center;
+	padding: 0 300px;
 }
 
-#contact h2 {
-    font-weight: 700;
-    font-size: 4rem;
+#contact h3 {
+	font-weight: 700;
+  font-size: 4rem;
 }
 
 #contact h4 {
-    font-weight: 400;
-    font-size: 1.75rem;
+	font-weight: 400;
+	font-size: 1.75rem;
+}
+
+#contact p {
+	font-family: 'Kalam';
+	font-size: 4rem!important;
 }
