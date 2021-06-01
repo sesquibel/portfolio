@@ -21,7 +21,7 @@ body {
     background-repeat: no-repeat;
 
 	display: grid;
-	grid-template-rows: 150px 1fr 300px;
+	grid-template-rows: 150px 1fr 500px;
 	grid-template-areas:
     "header"
     "main"
@@ -42,13 +42,6 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Raleway';
-}
-
-h2 {
-	text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
-    margin-bottom: 75px;
 }
 
 li {
@@ -168,6 +161,7 @@ main {
     font-size: 3rem;
     font-weight: 200;
     margin-bottom: 0;
+    margin-top: 0;
 }
 
 #bio-text p {
@@ -176,6 +170,13 @@ main {
 
 #projects {
     grid-area: "projects";
+}
+
+#projects h2 {
+	text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    margin-bottom: 75px;
 }
 
 #project-card-deck {
@@ -230,4 +231,16 @@ main {
 
 footer {
 	grid-area: "footer";
+    text-align: center;
+    padding: 0 300px;
+}
+
+#contact h2 {
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+#contact h4 {
+    font-weight: 400;
+    font-size: 1.75rem;
 }
