@@ -22,7 +22,7 @@ body {
 	background-repeat: no-repeat;
 
 	display: grid;
-	grid-template-rows: 150px 1fr 900px;
+	grid-template-rows: 150px 1fr 50px;
 	grid-template-areas:
     "header"
     "main"
@@ -87,11 +87,12 @@ a:hover {
 		grid-area: "main";
 
 		display: grid;
-		grid-template-rows: 800px 800px 1800px;
+		grid-template-rows: 800px 800px 1800px 1700px;
 		grid-template-areas:
 			"hero"
 			"projects"
-			"about";
+			"about"
+			"contact";
 	}
 
 	#hero {
@@ -202,7 +203,7 @@ a:hover {
 	#bio-img {
 		display: flex;
 		justify-content: center;
-		width: 35%;
+		width: 50%;
 	}
 
 	#bio-img img {
@@ -221,7 +222,7 @@ a:hover {
 		justify-content: center;
 		line-height: 2;
 		letter-spacing: 0.2rem;
-		width: 65%;
+		width: 50%;
 		padding-right: 50px;
 	}
 
@@ -240,75 +241,75 @@ a:hover {
 		grid-area: "about";
 	}
 
-    #timeline-wrapper {
-        display: flex;
-    }
+	#skills {
+		padding: 0 200px;
+	}
 
-    .timeline-left, .timeline-right {
-        width: 50%;
-        height: 800px;
-    }
+	#skills-header {
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 5px solid #F1F1EE;
+	}
 
-    .timeline-left {
-        border-right: 5px solid #F1F1EE;
+	#skills-body {
+		display: flex;
+	}
 
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-end;
-        padding-right: 25px;
-    }
+	#skills-body h3 {
+		margin-bottom: 50px;
+	}
 
-    .timeline-right {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-top: 100px;
-        padding-left: 25px;
-    }
+	#skills-titles {
+		width: 38%;
+		border-right: 5px solid #F1F1EE;
+		margin-right: 15px;
+	}
 
-    .box {
-        width: 200px;
-        height: 100px;
-        background-color: #CFC715;
-        box-shadow: 
-		rgba(0, 0, 0, 0.25) 0px 54px 55px, 
-		rgba(0, 0, 0, 0.12) 0px -12px 30px, 
-		rgba(0, 0, 0, 0.12) 0px 4px 6px, 
-		rgba(0, 0, 0, 0.17) 0px 12px 13px, 
-		rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    }
+	#skills-titles, #skills-progress-bar {
+		padding-top: 30px;
+	}
 
-    /* .box .arrow  {
-        border-style: solid;
-        position: absolute;
-        height: 15px;
-        width: 15px;
-        left: 15px;
-    } */
-     
-    /* .right {
-        border-color: #333 transparent transparent transparent;
-        border-width: 8px 8px 8px 0px;
-        left: -8px;
-    }
+	#skills-progress-bar {
+		width: 100%;
+		margin-top: 12px;
+	}
 
-    .right:after {
-        border-color: #333 transparent transparent transparent;
-        border-style: solid;
-        border-width: 7px 7px 7px 0px;
-        left: 1px;
-        content: "";
-        position: relative;
-        top: -7px;
-    } */
+	#skills-progress-bar .progress-bar {
+		height: 25px;
+		margin-bottom: 50px;
+		border: 1px solid #F1F1EE;
+		border-radius: 8px;
+	}
 
-	footer {
+	#html-progress, #css-progress, #javascript-progress, 
+	#bootstrap-progress, #git-progress, #wordpress-progress,
+	#ember-progress, #react-progress {
+		background-color: #CFC715;
+		height: 100%;
+		border-radius: 8px 0 0 8px;
+	}  
+
+	#html-progress, #css-progress, #bootstrap-progress {
+		width: 65%;
+	}
+
+	#javascript-progress, #git-progress, #ember-progress {
+		width: 50%;
+	}
+	
+	#wordpress-progress, #react-progress {
+		width: 35%;
+	}
+
+	#contact {
 		background-color: #34385e;
 		color: #F1F1EE;
 		grid-area: "footer";
 		text-align: center;
+		/* padding: 0 300px; */
+	}
+
+	#contact-title {
 		padding: 0 300px;
 	}
 
@@ -317,16 +318,62 @@ a:hover {
 		font-size: 4.25rem;
 	}
 
+	#products, #packages {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		margin-bottom: 150px;
+	}
+
+	.card-product {
+		background-color: #0D5D82;
+		color: #F1F1EE;
+		border-radius: 5px;
+		box-shadow: 
+		rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+		rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+		rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+		rgba(0, 0, 0, 0.09) 0px -3px 5px;
+		width: 200px;
+		padding: 25px;
+		font-size: 1.25rem;
+	}
+
+	.card-product:hover {
+		background-color: #F1F1EE;
+		color: #0D5D82;
+		content: "Email us for more info!";
+	}
+
+	.card-package {
+		background-color: #F1F1EE;
+		color: #0D5D82;
+		border-radius: 5px;
+		box-shadow: 
+		rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+		rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+		rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+		rgba(0, 0, 0, 0.09) 0px -3px 5px;
+		width: 300px;
+		height: 500px;
+		padding: 25px;
+		font-size: 2.25rem;
+	}
+
+	.card-package .card-body li {
+		list-style: disc;
+		font-size: 1.75rem;
+	}
+
 	#contact h4 {
 		font-weight: 400;
 		font-size: 1.75rem;
 	}
 
-	#contact p {
-		font-family: 'Kalam';
-		font-size: 4rem!important;
-		border: 1px solid #CFC715;
-		margin: 0 50px;
+	footer p {
+		padding-left: 15px;
 	}
 
 }
