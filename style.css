@@ -87,7 +87,7 @@ a:hover {
 		grid-area: "main";
 
 		display: grid;
-		grid-template-rows: 800px 800px 1800px 1100px;
+		grid-template-rows: 800px 800px 1800px 1800px;
 		grid-template-areas:
 			"hero"
 			"projects"
@@ -328,14 +328,11 @@ a:hover {
 	.card-product {
 		background-color: #0D5D82;
 		color: #F1F1EE;
-		border-radius: 5px;
-		box-shadow: 
-		rgba(0, 0, 0, 0.25) 0px 54px 55px, 
-		rgba(0, 0, 0, 0.12) 0px -12px 30px, 
-		rgba(0, 0, 0, 0.12) 0px 4px 6px, 
-		rgba(0, 0, 0, 0.17) 0px 12px 13px, 
-		rgba(0, 0, 0, 0.09) 0px -3px 5px;
-		width: 200px;
+		border-radius: 35px;
+		background: linear-gradient(#0D5D82 75%,#CFC715);
+		/* box-shadow: inset 20px -20px 60px #0D5D82,
+								inset -20px 20px 60px #CFC715; */
+		width: 250px;
 		height: 300px;
 		padding: 25px;
 		font-size: 1.25rem;
@@ -343,11 +340,21 @@ a:hover {
 
 	.card-product .card-header {
 		position: relative;
-		bottom: 90px;
+		bottom: 100px;
+		left: 25px;
 		background-color: #CFC715;
 		height: 150px;
+		width: 150px;
 		border-bottom: 1px solid #333;
 		border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+	}
+
+	.card-product i {
+		margin-top: 23px;
+		color: #333;
+		border: 0.2rem solid #333;
+		border-radius: 50%;
+		padding: 20px;
 	}
 
 	.card-product .card-body {
@@ -361,9 +368,31 @@ a:hover {
 	}
 
 	#contact h4 {
-		margin: 100px 0;
+		margin: 100px 0 125px 0;
 		font-weight: 400;
 		font-size: 1.75rem;
+	}
+
+	#contact-business-card {
+		display: flex;
+		justify-content: center;
+	}
+
+	#business-card {
+		height: 400px;
+		width: 800px;
+		border-radius: 3px;
+		background: linear-gradient(#bb371a,#333);
+		box-shadow: 
+		rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+		rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+		rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+		rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	footer p {
