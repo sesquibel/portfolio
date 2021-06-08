@@ -87,7 +87,7 @@ a:hover {
 		grid-area: "main";
 
 		display: grid;
-		grid-template-rows: 800px 800px 1800px 1700px;
+		grid-template-rows: 800px 800px 1800px 1100px;
 		grid-template-areas:
 			"hero"
 			"projects"
@@ -318,7 +318,7 @@ a:hover {
 		font-size: 4.25rem;
 	}
 
-	#products, #packages {
+	#products {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-evenly;
@@ -336,38 +336,32 @@ a:hover {
 		rgba(0, 0, 0, 0.17) 0px 12px 13px, 
 		rgba(0, 0, 0, 0.09) 0px -3px 5px;
 		width: 200px;
+		height: 300px;
 		padding: 25px;
 		font-size: 1.25rem;
 	}
 
-	.card-product:hover {
-		background-color: #F1F1EE;
-		color: #0D5D82;
-		content: "Email us for more info!";
+	.card-product .card-header {
+		position: relative;
+		bottom: 90px;
+		background-color: #CFC715;
+		height: 150px;
+		border-bottom: 1px solid #333;
+		border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
 	}
 
-	.card-package {
-		background-color: #F1F1EE;
-		color: #0D5D82;
-		border-radius: 5px;
-		box-shadow: 
-		rgba(0, 0, 0, 0.25) 0px 54px 55px, 
-		rgba(0, 0, 0, 0.12) 0px -12px 30px, 
-		rgba(0, 0, 0, 0.12) 0px 4px 6px, 
-		rgba(0, 0, 0, 0.17) 0px 12px 13px, 
-		rgba(0, 0, 0, 0.09) 0px -3px 5px;
-		width: 300px;
-		height: 500px;
-		padding: 25px;
-		font-size: 2.25rem;
+	.card-product .card-body {
+		display: flex;
+		align-items: center;
 	}
 
-	.card-package .card-body li {
-		list-style: disc;
-		font-size: 1.75rem;
+	.card-body p {
+		position: relative;
+		bottom: 90px;
 	}
 
 	#contact h4 {
+		margin: 100px 0;
 		font-weight: 400;
 		font-size: 1.75rem;
 	}
