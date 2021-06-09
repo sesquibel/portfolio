@@ -245,33 +245,32 @@ a:hover {
 		padding: 0 200px;
 	}
 
-	#skills-header {
+	#skills-level {
 		display: flex;
 		justify-content: space-between;
-		border-bottom: 5px solid #F1F1EE;
 	}
 
 	#skills-body {
 		display: flex;
 	}
 
-	#skills-body h3 {
-		margin-bottom: 50px;
+	#skills-titles h3 {
+		margin-bottom: 52px;
+		margin-left: 100px;
 	}
 
 	#skills-titles {
-		width: 38%;
+		width: 30%;
 		border-right: 5px solid #F1F1EE;
-		margin-right: 15px;
 	}
 
-	#skills-titles, #skills-progress-bar {
-		padding-top: 30px;
+	#skills-titles, #skills-level {
+		margin-bottom: 30px;
 	}
 
 	#skills-progress-bar {
 		width: 100%;
-		margin-top: 12px;
+		margin-left: 30px;
 	}
 
 	#skills-progress-bar .progress-bar {
@@ -389,10 +388,22 @@ a:hover {
 		rgba(0, 0, 0, 0.12) 0px 4px 6px, 
 		rgba(0, 0, 0, 0.17) 0px 12px 13px, 
 		rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	}
 
+	#business-card .card-header {
+		background-color: #F1F1EE;
+		width: 100%;
+		height: 175px;
+	}
+
+	#business-card .card-body {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
+		height: 225px;
+		border-radius: 0 0 25% 25%;
+		transform: rotate(0.5turn);
 	}
 
 	footer p {
