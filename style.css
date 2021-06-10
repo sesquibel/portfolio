@@ -56,6 +56,80 @@ a:hover {
 	cursor: pointer;
 }
 
+header {
+	grid-area: "header";
+	display: flex;
+	justify-content: center;
+	padding: 50px;
+	border-bottom: 3px solid #F1F1EE;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+}
+
+nav a {
+	font-size: 5rem;
+}
+
+nav li {
+	padding: 0 40px;
+}
+
+main {
+	grid-area: "main";
+
+	display: grid;
+	grid-template-rows: 2fr 1fr 2fr 1fr;
+	grid-template-areas:
+		"hero"
+		"projects"
+		"about"
+		"contact";
+}
+
+#hero {
+	grid-area: "hero";
+}
+
+#hero h1 {
+	font-size: 8rem;
+	font-weight: normal;
+	letter-spacing: 0.1rem;
+}
+
+#hero p {
+	font-size: 6rem;
+	font-weight: normal;
+	letter-spacing: 0.1rem;
+}
+
+#hero-text {
+	position: absolute;
+	top: 100%;
+	left: 100%;
+	width: 800px;
+}
+
+#down-arrow {
+	position: absolute;
+	bottom: -1400px;
+	left: 650px;
+
+	animation: 750ms infinite alternate bounce; 
+}
+
+#down-arrow span {
+	font-size: 15rem;
+	color: #bb371a;
+}
+
+@keyframes bounce {
+	from { transform: translate3d(0, 0, 0);}
+	to { transform: translate3d(0, 25px, 0);}
+}
+
 @media screen and (min-width: 480px) and (max-width: 767px) {}
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {}
@@ -68,14 +142,8 @@ a:hover {
 		padding: 10px;
 	}
 
-	#logo img {
-		max-height: 125px;
-	}
-
 	nav {
-		display: flex;
 		justify-content: end;
-		align-items: center;
 		padding-right: 100px;
 	}
 
@@ -83,11 +151,15 @@ a:hover {
 		padding: 0 40px;
 	}
 
+	nav a {
+		font-size: 1.5rem;
+	}
+
 	main {
 		grid-area: "main";
 
 		display: grid;
-		grid-template-rows: 800px 800px 1800px 1800px;
+		grid-template-rows: 800px 950px 2000px 1650px;
 		grid-template-areas:
 			"hero"
 			"projects"
@@ -119,16 +191,13 @@ a:hover {
 	}
 
 	#down-arrow {
-		position: absolute;
-		bottom: 100px;
+		bottom: 200px;
 		left: 50%;
-
-		animation: 750ms infinite alternate bounce; 
 	}
 
-	@keyframes bounce {
-		from { transform: translate3d(0, 0, 0);}
-		to { transform: translate3d(0, 25px, 0);}
+	#down-arrow span {
+		font-size: 3rem;
+		color: #bb371a;
 	}
 
 	#projects {
@@ -193,7 +262,8 @@ a:hover {
 
 	#bio {
 		display: flex; 
-		padding: 50px; 
+		padding: 50px; 		
+		margin-bottom: 200px;
 	}
 
 	#about h2, #contact h2 {
@@ -203,7 +273,7 @@ a:hover {
 	#bio-img {
 		display: flex;
 		justify-content: center;
-		width: 50%;
+		width: 40%;
 	}
 
 	#bio-img img {
@@ -213,7 +283,7 @@ a:hover {
 		rgba(0, 0, 0, 0.12) 0px 4px 6px, 
 		rgba(0, 0, 0, 0.17) 0px 12px 13px, 
 		rgba(0, 0, 0, 0.09) 0px -3px 5px;
-		max-width: 65%;
+		max-width: 80%;
 	}
 
 	#bio-text {
@@ -222,6 +292,7 @@ a:hover {
 		justify-content: center;
 		line-height: 2;
 		letter-spacing: 0.2rem;
+		font-size: 1.35rem;
 		width: 50%;
 		padding-right: 50px;
 	}
@@ -305,8 +376,8 @@ a:hover {
 		color: #F1F1EE;
 		grid-area: "footer";
 		text-align: center;
-		/* padding: 0 300px; */
 	}
+
 
 	#contact-title {
 		padding: 0 300px;
@@ -328,24 +399,32 @@ a:hover {
 		background-color: #0D5D82;
 		color: #F1F1EE;
 		border-radius: 35px;
-		background: linear-gradient(#0D5D82 75%,#CFC715);
-		/* box-shadow: inset 20px -20px 60px #0D5D82,
-								inset -20px 20px 60px #CFC715; */
+		box-shadow: 
+		rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+		rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+		rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+		rgba(0, 0, 0, 0.09) 0px -3px 5px;
 		width: 250px;
 		height: 300px;
-		padding: 25px;
+		padding: 50px;
 		font-size: 1.25rem;
 	}
 
 	.card-product .card-header {
 		position: relative;
-		bottom: 100px;
-		left: 25px;
+		bottom: 90px;
 		background-color: #CFC715;
 		height: 150px;
 		width: 150px;
 		border-bottom: 1px solid #333;
-		border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+		border-radius: 50%;
+		box-shadow: 
+		rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+		rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+		rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+		rgba(0, 0, 0, 0.09) 0px -3px 5px;
 	}
 
 	.card-product i {
@@ -361,9 +440,9 @@ a:hover {
 		align-items: center;
 	}
 
-	.card-body p {
+	.card-product .card-body p {
 		position: relative;
-		bottom: 90px;
+		bottom: 80px;
 	}
 
 	#contact h4 {
@@ -381,7 +460,8 @@ a:hover {
 		height: 400px;
 		width: 800px;
 		border-radius: 3px;
-		background: linear-gradient(#bb371a,#333);
+		background: linear-gradient(#F1F1EE, #bb371a);
+		color: #333;
 		box-shadow: 
 		rgba(0, 0, 0, 0.25) 0px 54px 55px, 
 		rgba(0, 0, 0, 0.12) 0px -12px 30px, 
@@ -390,20 +470,33 @@ a:hover {
 		rgba(0, 0, 0, 0.09) 0px -3px 5px;
 	}
 
-	#business-card .card-header {
-		background-color: #F1F1EE;
-		width: 100%;
-		height: 175px;
+	#business-card .card-body {
+		display: flex;
+		height: 80%;
 	}
 
-	#business-card .card-body {
+	#left, #right {
+		width: 50%;
+	}
+
+	#right {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		font-size: 1.5rem;
+	}
+
+	#business-card .card-footer {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		height: 20%;
+		background-color: #333;
+		font-size: 1.45rem;
+	}
 
-		height: 225px;
-		border-radius: 0 0 25% 25%;
-		transform: rotate(0.5turn);
+	.card-body img {
+		max-width: 100%;
 	}
 
 	footer p {
