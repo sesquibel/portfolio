@@ -1,136 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Patrick+Hand&display=swap');
-/* Color Pallet:
-    White: #f4f1d6;
-    Black: #333;
-    Purple: #34385e;
-    Dark Blue: #090979;
-*/
-
-* {
-	box-sizing: border-box;
-}
-
-body {
-	margin: 0;
-	padding: 0;
-	font-family: 'Open Sans';
-	font-size: 16px;
-	color: #F1F1EE;
-	background: #0D5D82;
-	background-size: cover;
-	background-repeat: no-repeat;
-
-	display: grid;
-	grid-template-rows: 150px 1fr 50px;
-	grid-template-areas:
-    "header"
-    "main"
-    "footer";
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Raleway';
-}
-
-h2 {
-	text-align: center;
-	text-transform: uppercase;
-	letter-spacing: 0.3rem;
-	margin: 75px 0;
-}
-
-li {
-	list-style: none;
-}
-
-a {
-	font-size: 1.5rem;
-	color: #F1F1EE;
-	text-decoration: none;
-}
-
-a:hover {
-	color: #CFC715;
-	font-style: italic;
-	cursor: pointer;
-}
-
-header {
-	grid-area: "header";
-	display: flex;
-	justify-content: center;
-	padding: 50px;
-	border-bottom: 3px solid #F1F1EE;
-}
-
-nav {
-	display: flex;
-	align-items: center;
-}
-
-nav a {
-	font-size: 5rem;
-}
-
-nav li {
-	padding: 0 40px;
-}
-
-main {
-	grid-area: "main";
-
-	display: grid;
-	grid-template-rows: 2fr 1fr 2fr 1fr;
-	grid-template-areas:
-		"hero"
-		"projects"
-		"about"
-		"contact";
-}
-
-#hero {
-	grid-area: "hero";
-}
-
-#hero h1 {
-	font-size: 8rem;
-	font-weight: normal;
-	letter-spacing: 0.1rem;
-}
-
-#hero p {
-	font-size: 6rem;
-	font-weight: normal;
-	letter-spacing: 0.1rem;
-}
-
-#hero-text {
-	position: absolute;
-	top: 100%;
-	left: 100%;
-	width: 800px;
-}
-
-#down-arrow {
-	position: absolute;
-	bottom: -1400px;
-	left: 650px;
-
-	animation: 750ms infinite alternate bounce; 
-}
-
-#down-arrow span {
-	font-size: 15rem;
-	color: #bb371a;
-}
-
-@keyframes bounce {
-	from { transform: translate3d(0, 0, 0);}
-	to { transform: translate3d(0, 25px, 0);}
-}
-
-@media screen and (min-width: 480px) and (max-width: 767px) {}
+/* @media screen and (min-width: 480px) and (max-width: 767px) {}
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {}
 
@@ -265,10 +133,6 @@ main {
 		display: flex; 
 		padding: 50px; 		
 		margin-bottom: 200px;
-	}
-
-	#about h2, #contact h2 {
-		color: #CFC715;
 	}
 
 	#bio-img {
@@ -504,4 +368,4 @@ main {
 		padding-left: 15px;
 	}
 
-}
+} */

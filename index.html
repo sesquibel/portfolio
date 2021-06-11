@@ -5,55 +5,56 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="util.css">
+	<link rel="stylesheet" href="styles.css">
 	<script src="https://kit.fontawesome.com/e2aec2a8c5.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 	<script src="script.js" defer></script>
 	<title>Samuel Esquibel | Portfolio</title>
 </head>
 
-<body>
+<body class="bg-blue text-white d-grid">
 	<header>
 		<div></div>
-		<nav>
-			<li><a href="#projects">Projects</a></li>
-			<li><a href="#about">About</a></li>
-			<li><a href="#contact">Contact</a></li>
+		<nav class="d-flex just-center ls-none">
+			<li class=><a href="#projects" class="text-white text-undecorated">Projects</a></li>
+			<li><a href="#about" class="text-white text-undecorated">About</a></li>
+			<li><a href="#contact" class="text-white text-undecorated">Contact</a></li>
 		</nav>
 	</header>
-	<main>
+	<main class="d-grid">
 
 		<!-- MAIN CONTENT SECTION-->
 		<section id="hero">
-			<div id="hero-text">
-				<h1>Hi, I'm <span style="color: #CFC715;">Sam</span>.</h1>
+			<div id="hero-text" class="d-flex column">
+				<h1>Hi, I'm <span class="text-yellow">Sam</span>.</h1>
 				<p>I'm a front end web developer / designer.</p>
 			</div>
-			<div id="down-arrow">
-				<a href="#projects"><span><i class="fas fa-angle-down"></i></span></a>
+			<div id="down-arrow" class="d-flex a-items-end just-center">
+				<a href="#projects"><span class="text-red"><i class="fas fa-angle-down"></i></span></a>
 			</div>
 		</section>
 
 		<!-- PROJECT CARD DECK SECTION -->
-		<section id="projects">
-			<h2>Projects</h2>
-			<div id="project-card-deck">
+		<section id="projects" class="bg-white">
+			<h2 class="text-blue text-center text-uppercase">Projects</h2>
+			<div id="projects-card-deck" class="d-flex wrap just-center">
 				<a href="" alt="">
-					<div class="card">
+					<div class="card bg-purple text-white d-flex column just-center a-items-center text-center box-shadow">
 						<h3>This Portfolio</h3>
-						<p><em>A mobile-first responsive portfolio/marketing website.</em></p>
+						<p class="text-yellow"><em>A mobile-first responsive portfolio/marketing website.</em></p>
 					</div>
 				</a>
 				<a href="https://github.com/sesquibel/css-grid-layouts" alt="link to github repository - CSS Grid Layouts">
-					<div class="card">
+					<div class="card bg-purple text-white d-flex column just-center a-items-center text-center box-shadow">
 						<h3>CSS Grid Templates</h3>
-						<p><em>CSS Grid Layouts with responsive design.</em></p>
+						<p class="text-yellow"><em>CSS Grid Layouts with responsive design.</em></p>
 					</div>
 				</a>
-				<a href="https://loving-goldberg-d0b1af.netlify.app/" alt="link to external project - sprighly goat">
-					<div class="card">
+				<a href="https://loving-goldberg-d0b1af.netlify.app/" alt="link to external project - sprightly goat">
+					<div class="card bg-purple text-white d-flex column just-center a-items-center text-center box-shadow">
 						<h3>Sprightly Goat Responsive Website</h3>
-						<p><em>A example of a mobile-first responsive website.</em></p>			
+						<p class="text-yellow"><em>A example of a mobile-first responsive website.</em></p>			
 					</div>
 				</a>
 			</div>
@@ -61,7 +62,7 @@
 
 		<!-- ABOUT ME SECTION-->
 		<section id="about">
-			<h2>About</h2>
+			<h2 class="text-yellow text-center text-uppercase">About</h2>
 			<article id="bio">
 				<div id="bio-img">
 					<img src="/assets/Samuel-Esquibel_Headshot.jpg" alt="bio picture">
@@ -76,14 +77,8 @@
 					</p>
 				</div>
 			</article>
-			<h2>Skills</h2>
+			<h2 class="text-yellow text-center text-uppercase">Skills</h2>
 			<section id="skills">
-				<!-- <div id="skills-header">
-					<h3>Skill</h3>
-					<h3>Beginner</h3>
-					<h3>Intermediate</h3>
-					<h3>Expert</h3>
-				</div> -->
 				<div id="skills-body">
 					<div id="skills-titles">
 						<h3>Skill</h3>
@@ -130,11 +125,12 @@
 				</div>
 			</section>
 		</section>
+
 		<!-- CONTACT SECTION -->
-		<section id="contact">
+		<section id="contact" class="bg-purple">
 			<div id="contact-title">
-				<h2>Contact</h2>
-				<h3>Need help <span style="color: #0D5D82;">designing</span> and <span style="color: #bb371a;">building</span> a website?!</h3>
+				<h2 class="text-yellow text-center text-uppercase">Contact</h2>
+				<h3>Need help <span class="text-purple">designing</span> and <span class="text-red">building</span> a website?!</h3>
 				<h4>We offer the following services:</h4>
 			</div>
 			<div id="products">
@@ -181,18 +177,17 @@
 			</div>
 			<div id="contact-business-card">
 				<div id="business-card">
-					<!-- <div class="card-header"></div> -->
 					<div class="card-body">
 						<div id="left">
 							<img src="assets/luckyRam_designs_transparent.png" alt="luck ram design logo">
 						</div>
 						<div id="right">
 							<p>Samuel Esquibel</p>
-							<p><a href="mailto:sesquibel@luckyram.io" style="color: #333;">sesquibel@luckyram.io</a></p>
+							<p><a href="mailto:sesquibel@luckyram.io" class="text-black">sesquibel@luckyram.io</a></p>
 						</div>
 					</div>
 					<div class="card-footer">
-						<p style="color: #F1F1EE;">Shoot us an email with the project details and timeline to get started!</p>
+						<p class="text-white">Shoot us an email with the project details and timeline to get started!</p>
 					</div>
 				</div>
 			</div>

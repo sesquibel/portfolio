@@ -1,0 +1,165 @@
+* {
+	box-sizing: border-box;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.relative {
+	position: relative;
+}
+
+.d-grid {
+	display: grid;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.column {
+	flex-direction: column;
+}
+
+.wrap {
+	flex-wrap: wrap;
+}
+
+.just-beg {
+	justify-content: flex-start;
+}
+
+.just-center {
+	justify-content: center;
+}
+
+.just-end {
+	justify-content: flex-end;
+}
+
+.just-between {
+	justify-content: space-between;
+}
+
+.just-around {
+	justify-content: space-around;
+}
+
+.just-evenly {
+	justify-content: space-evenly;
+}
+
+.a-items-beg {
+	align-items: flex-start;
+}
+
+.a-items-center {
+	align-items: center;
+}
+
+.a-items-end {
+	align-items: flex-end;
+}
+
+.text-white {
+	color: #F1F1EE;
+}
+
+.text-black {
+	color: #333;
+}
+
+.text-blue {
+	color: #0D5D82;
+}
+
+.text-purple {
+	color: #34385e;
+}
+
+.text-red {
+	color: #bb371a;
+}
+
+.text-yellow {
+	color: #CFC715;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.text-underline {
+	text-decoration: underline;
+}
+
+.text-undecorated {
+	text-decoration: none;
+}
+
+.fw-normal {
+	font-weight: normal;
+}
+
+.fw-100 {
+	font-weight: 100;
+}
+
+.fw-400 {
+	font-weight: 400;
+}
+
+.fw-700 {
+	font-weight: 700;
+}
+
+.fs-italic {
+	font-style: italic;
+}
+
+.fs-normal {
+	font-style: normal;
+}
+
+.bg-white {
+	background-color: #F1F1EE;
+}
+
+.bg-black {
+	background-color: #333;
+}
+
+.bg-blue {
+	background-color: #0D5D82;
+}
+
+.bg-purple {
+	background-color: #34385e;
+}
+
+.bg-red {
+	background-color: #bb371a;
+}
+
+.bg-yellow {
+	background-color: #CFC715;
+}
+
+.box-shadow {
+	box-shadow: 
+		rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+		rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+		rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+		rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.ls-none {
+	list-style: none;
+}
+
