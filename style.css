@@ -20,13 +20,16 @@ body {
 	background: #0D5D82;
 	background-size: cover;
 	background-repeat: no-repeat;
+	overflow-x: hidden;
 
 	display: grid;
-	grid-template-rows: 150px 1fr 50px;
+	grid-template-rows: 100px 1fr 50px;
 	grid-template-areas:
-    "header"
+	"header"
     "main"
     "footer";
+
+	max-width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -57,31 +60,14 @@ a:hover {
 }
 
 header {
-	grid-area: "header";
-	display: flex;
-	justify-content: center;
-	padding: 50px;
-	border-bottom: 3px solid #F1F1EE;
-}
-
-nav {
-	display: flex;
-	align-items: center;
-}
-
-nav a {
-	font-size: 5rem;
-}
-
-nav li {
-	padding: 0 40px;
+	display: none;
 }
 
 main {
 	grid-area: "main";
 
 	display: grid;
-	grid-template-rows: 2fr 1fr 2fr 1fr;
+	grid-template-rows: 800px 950px 2500px 3600px;
 	grid-template-areas:
 		"hero"
 		"projects"
@@ -94,34 +80,33 @@ main {
 }
 
 #hero h1 {
-	font-size: 8rem;
+	font-size: 4rem;
 	font-weight: normal;
 	letter-spacing: 0.1rem;
+	margin-bottom: 0;
 }
 
 #hero p {
-	font-size: 6rem;
+	font-size: 2rem;
 	font-weight: normal;
 	letter-spacing: 0.1rem;
 }
 
 #hero-text {
-	position: absolute;
-	top: 100%;
-	left: 100%;
-	width: 800px;
+	position: relative;
+	top: 15%;
+	left: 10%;
+	width: 100vw;
 }
 
 #down-arrow {
-	position: absolute;
-	bottom: -1400px;
-	left: 650px;
-
-	animation: 750ms infinite alternate bounce; 
+	position: relative;
+	top: 30%;
+	left: 42.5%;
 }
 
 #down-arrow span {
-	font-size: 15rem;
+	font-size: 5rem;
 	color: #bb371a;
 }
 
@@ -130,11 +115,685 @@ main {
 	to { transform: translate3d(0, 25px, 0);}
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {}
+#projects {
+	grid-area: "projects";
+	background-color: #F1F1EE; 
+}
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {}
+#projects h2 {
+	color: #0D5D82;
+}
+
+#project-card-deck {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.card {
+	background-color: #34385e;
+	color: #F1F1EE;
+	border: 1px solid #333;
+	border-radius: 10px;
+
+	box-shadow:
+	0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+	0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+	0 12.5px 10px rgba(0, 0, 0, 0.06),
+	0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+	0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+	0 100px 80px rgba(0, 0, 0, 0.12);
+
+	height: 200px;
+	width: 250px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 25px;
+	margin: 20px;
+	text-align: center;
+}
+
+.card:hover {
+	background-color: #F1F1EE;
+	color: #333;
+	opacity: 0.5;
+}
+
+.card h3 {
+	margin-bottom: 0;
+	font-size: 1.5rem;
+}
+
+.card p {
+	color: #CFC715;
+	font-size: 1rem;
+}
+
+#about {
+	grid-area: "about";
+}
+
+#bio {
+	padding: 50px; 		
+}
+
+#about h2, #contact h2 {
+	color: #CFC715;
+}
+
+#bio-img {
+	display: flex;
+	justify-content: center;
+	max-width: 100%;
+}
+
+#bio-img img {
+	box-shadow: 
+	rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+	rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+	rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+	rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+	rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	max-width: 80%;
+}
+
+#bio-text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	line-height: 2;
+	letter-spacing: 0.2rem;
+	font-size: 1.35rem;
+	margin-top: 50px;
+}
+
+#bio-text h3 {
+	font-size: 3rem;
+	font-weight: 200;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+#bio-text p {
+	font-weight: 100;
+}
+
+#about {
+	grid-area: "about";
+}
+
+#skills {
+	padding: 0 35px;
+}
+
+#skills-level {
+	display: flex;
+	justify-content: space-between;
+}
+
+#skills-body {
+	display: flex;
+}
+
+#skills-titles h3 {
+	margin-bottom: 52px;
+}
+
+#skills-titles {
+	width: 30%;
+	border-right: 5px solid #F1F1EE;
+}
+
+#skills-titles, #skills-level {
+	margin-bottom: 30px;
+}
+
+#skills-progress-bar {
+	width: 100%;
+	margin-left: 30px;
+}
+
+#skills-progress-bar .progress-bar {
+	height: 25px;
+	margin-bottom: 50px;
+	border: 1px solid #F1F1EE;
+	border-radius: 8px;
+}
+
+#html-progress, #css-progress, #javascript-progress, 
+#bootstrap-progress, #git-progress, #wordpress-progress,
+#ember-progress, #react-progress {
+	background-color: #CFC715;
+	height: 100%;
+	border-radius: 8px 0 0 8px;
+}  
+
+#html-progress, #css-progress, #bootstrap-progress {
+	width: 65%;
+}
+
+#javascript-progress, #git-progress, #ember-progress {
+	width: 50%;
+}
+
+#wordpress-progress, #react-progress {
+	width: 35%;
+}
+
+#contact {
+	background-color: #34385e;
+	color: #F1F1EE;
+	grid-area: "footer";
+	text-align: center;
+}
+
+#contact h3 {
+	font-weight: 700;
+	font-size: 4.25rem;
+}
+
+#products {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	padding: 0 25px;
+}
+
+.card-product {
+	background-color: #0D5D82;
+	color: #F1F1EE;
+	border-radius: 35px;
+	box-shadow: 
+	rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+	rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+	rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+	rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+	rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	width: 250px;
+	height: 300px;
+	padding: 0 50px;
+	font-size: 1.25rem;
+	margin-bottom: 125px;
+}
+
+.card-product .card-header {
+	position: relative;
+	bottom: 90px;
+	background-color: #CFC715;
+	height: 150px;
+	width: 150px;
+	border-bottom: 1px solid #333;
+	border-radius: 50%;
+	box-shadow: 
+	rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+	rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+	rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+	rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+	rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card-product i {
+	margin-top: 23px;
+	color: #333;
+	border: 0.2rem solid #333;
+	border-radius: 50%;
+	padding: 20px;
+}
+
+.card-product .card-body {
+	display: flex;
+	align-items: center;
+}
+
+.card-product .card-body p {
+	position: relative;
+	bottom: 80px;
+}
+
+#contact h4 {
+	margin: 100px 0 125px 0;
+	font-weight: 400;
+	font-size: 1.75rem;
+}
+
+#contact-business-card {
+	display: flex;
+	justify-content: center;
+}
+
+#business-card {
+	height: 600px;
+	width: 300px;
+	border-radius: 3px;
+	background: linear-gradient(#F1F1EE, #bb371a);
+	color: #333;
+	box-shadow: 
+	rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+	rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+	rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+	rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+	rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#business-card .card-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#right {
+	display: flex;
+	flex-direction: column;
+	font-size: 1.5rem;
+}
+
+#business-card .card-footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 21%;
+	background-color: #333;
+}
+
+.card-body img {
+	max-width: 100%;
+}
+
+footer {
+	grid-area: "footer";
+}
+
+footer p {
+	padding-left: 15px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	body {
+		grid-template-rows: 125px 1fr 50px;
+		grid-template-areas:
+			"header"
+			"main"
+			"footer";
+		}
+	
+	h2 {
+		font-size: 2rem;
+	}
+	
+	header {
+		padding: 10px;
+		border-bottom: none;
+	}
+
+	nav {
+		justify-content: center;
+		padding-right: 50px;
+	}
+
+	nav a {
+		font-size: 1.5rem;
+	}
+
+	main {
+		grid-area: "main";
+
+		display: grid;
+		grid-template-rows: 800px 800px 2400px 2400px;
+		grid-template-areas:
+			"hero"
+			"projects"
+			"about"
+			"contact";
+	}
+
+	#hero h1 {
+		font-size: 4rem;
+		font-weight: normal;
+		letter-spacing: 0.1rem;
+		margin-bottom: 0;
+	}
+
+	#hero p {
+		font-size: 2rem;
+		font-weight: normal;
+		letter-spacing: 0.1rem;
+	}
+
+	#hero-text {
+		position: relative;
+		top: 5%;
+		left: 10%;
+		width: 50vw;
+	}
+
+	#down-arrow {
+		top: 10%;
+		left: 45%;
+	}
+
+	#down-arrow span {
+		font-size: 5rem;
+		color: #bb371a;
+	}
+
+	#projects {
+		grid-area: "projects";
+		background-color: #F1F1EE; 
+	}
+
+	#projects h2 {
+		color: #0D5D82;
+	}
+
+	#project-card-deck {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.card {
+		background-color: #34385e;
+		color: #F1F1EE;
+		border: 1px solid #333;
+		border-radius: 10px;
+
+		box-shadow:
+		0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+		0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+		0 12.5px 10px rgba(0, 0, 0, 0.06),
+		0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+		0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+		0 100px 80px rgba(0, 0, 0, 0.12);
+
+		height: 200px;
+		width: 300px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 25px;
+		margin: 20px;
+		text-align: center;
+	}
+
+	.card:hover {
+		background-color: #F1F1EE;
+		color: #333;
+		opacity: 0.5;
+	}
+
+	.card h3 {
+		margin-bottom: 0;
+		font-size: 1.5rem;
+	}
+
+	.card p {
+		color: #CFC715;
+		font-size: 1rem;
+	}
+
+	#about {
+		grid-area: "about";
+	}
+
+	#bio {
+		padding: 50px; 		
+	}
+
+	#about h2, #contact h2 {
+		color: #CFC715;
+	}
+
+	#bio-img {
+		display: flex;
+		justify-content: center;
+		max-width: 100%;
+	}
+
+	#bio-img img {
+		box-shadow: 
+		rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+		rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+		rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+		rgba(0, 0, 0, 0.09) 0px -3px 5px;
+		max-width: 80%;
+	}
+
+	#bio-text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		line-height: 2;
+		letter-spacing: 0.2rem;
+		font-size: 1.35rem;
+		margin-top: 50px;
+	}
+
+	#bio-text h3 {
+		font-size: 3rem;
+		font-weight: 200;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+
+	#bio-text p {
+		font-weight: 100;
+	}
+
+	#about {
+		grid-area: "about";
+	}
+
+	#skills {
+		padding: 0 100px;
+	}
+
+	#skills-level {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	#skills-body {
+		display: flex;
+	}
+
+	#skills-titles h3 {
+		margin-bottom: 52px;
+	}
+
+	#skills-titles {
+		width: 30%;
+		border-right: 5px solid #F1F1EE;
+	}
+
+	#skills-titles, #skills-level {
+		margin-bottom: 30px;
+	}
+
+	#skills-progress-bar {
+		width: 100%;
+		margin-left: 30px;
+	}
+
+	#skills-progress-bar .progress-bar {
+		height: 25px;
+		margin-bottom: 50px;
+		border: 1px solid #F1F1EE;
+		border-radius: 8px;
+	}
+
+	#html-progress, #css-progress, #javascript-progress, 
+	#bootstrap-progress, #git-progress, #wordpress-progress,
+	#ember-progress, #react-progress {
+		background-color: #CFC715;
+		height: 100%;
+		border-radius: 8px 0 0 8px;
+	}  
+
+	#html-progress, #css-progress, #bootstrap-progress {
+		width: 65%;
+	}
+
+	#javascript-progress, #git-progress, #ember-progress {
+		width: 50%;
+	}
+	
+	#wordpress-progress, #react-progress {
+		width: 35%;
+	}
+
+	#contact {
+		background-color: #34385e;
+		color: #F1F1EE;
+		grid-area: "footer";
+		text-align: center;
+	}
+
+
+	#contact-title {
+		padding: 0 50px;
+	} 
+
+	#contact h3 {
+		font-weight: 700;
+		font-size: 4.25rem;
+	}
+
+	#products {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		padding: 50px;
+	}
+
+	.card-product {
+		background-color: #0D5D82;
+		color: #F1F1EE;
+		border-radius: 35px;
+		box-shadow: 
+		rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+		rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+		rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+		rgba(0, 0, 0, 0.09) 0px -3px 5px;
+		width: 250px;
+		height: 300px;
+		padding: 50px;
+		font-size: 1.25rem;
+		margin-bottom: 100px;
+	}
+
+	.card-product .card-header {
+		position: relative;
+		bottom: 90px;
+		background-color: #CFC715;
+		height: 150px;
+		width: 150px;
+		border-bottom: 1px solid #333;
+		border-radius: 50%;
+		box-shadow: 
+		rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+		rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+		rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+		rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	}
+
+	.card-product i {
+		margin-top: 23px;
+		color: #333;
+		border: 0.2rem solid #333;
+		border-radius: 50%;
+		padding: 20px;
+	}
+
+	.card-product .card-body {
+		display: flex;
+		align-items: center;
+	}
+
+	.card-product .card-body p {
+		position: relative;
+		bottom: 80px;
+	}
+
+	#contact h4 {
+		margin: 100px 0 125px 0;
+		font-weight: 400;
+		font-size: 1.75rem;
+	}
+
+	#contact-business-card {
+		display: flex;
+		justify-content: center;
+	}
+
+	#business-card {
+		height: 300px;
+		width: 600px;
+		border-radius: 3px;
+		background: linear-gradient(#F1F1EE, #bb371a);
+		color: #333;
+		box-shadow: 
+		rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+		rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+		rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+		rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	}
+
+	#business-card .card-body {
+		display: flex;
+		height: 80%;
+	}
+
+	#left, #right {
+		width: 50%;
+	}
+
+	#right {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		font-size: 1.5rem;
+	}
+
+	#business-card .card-footer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 20%;
+		background-color: #333;
+	}
+
+	.card-body img {
+		max-width: 100%;
+	}
+
+	footer p {
+		padding-left: 15px;
+	}
+}
 
 @media screen and (min-width: 1024px) {
+	body {
+		grid-template-rows: 200px 1fr 75px;
+		grid-template-areas:
+		"header"
+		"main"
+		"footer";
+	}
+
+	h2 {
+		font-size: 2.5rem;
+	}
+
 	header {
 		grid-area: "header";
 		display: flex;
@@ -160,7 +819,7 @@ main {
 		grid-area: "main";
 
 		display: grid;
-		grid-template-rows: 800px 950px 2000px 1650px;
+		grid-template-rows: 800px 1050px 2800px 1950px;
 		grid-template-areas:
 			"hero"
 			"projects"
@@ -186,13 +845,13 @@ main {
 	}
 
 	#hero-text {
-		position: absolute;
-		top: 30%;
+		position: relative;
+		top: 10%;
 		left: 10%;
 	}
 
 	#down-arrow {
-		bottom: 200px;
+		top: 25%;
 		left: 50%;
 	}
 
@@ -262,9 +921,7 @@ main {
 	}
 
 	#bio {
-		display: flex; 
 		padding: 50px; 		
-		margin-bottom: 200px;
 	}
 
 	#about h2, #contact h2 {
@@ -274,7 +931,7 @@ main {
 	#bio-img {
 		display: flex;
 		justify-content: center;
-		width: 40%;
+		max-width: 100%;
 	}
 
 	#bio-img img {
@@ -290,12 +947,11 @@ main {
 	#bio-text {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		align-items: center;
 		line-height: 2;
 		letter-spacing: 0.2rem;
-		font-size: 1.35rem;
-		width: 50%;
-		padding-right: 50px;
+		font-size: 1.75rem;
+		padding: 50px;
 	}
 
 	#bio-text h3 {
@@ -314,7 +970,7 @@ main {
 	}
 
 	#skills {
-		padding: 0 200px;
+		padding: 0 100px;
 	}
 
 	#skills-level {
@@ -328,10 +984,10 @@ main {
 
 	#skills-titles h3 {
 		margin-bottom: 52px;
-		margin-left: 100px;
 	}
 
 	#skills-titles {
+
 		width: 30%;
 		border-right: 5px solid #F1F1EE;
 	}
@@ -379,11 +1035,6 @@ main {
 		text-align: center;
 	}
 
-
-	#contact-title {
-		padding: 0 300px;
-	}
-
 	#contact h3 {
 		font-weight: 700;
 		font-size: 4.25rem;
@@ -393,7 +1044,7 @@ main {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-evenly;
-		margin-bottom: 150px;
+		padding: 0 50px;
 	}
 
 	.card-product {
@@ -410,6 +1061,7 @@ main {
 		height: 300px;
 		padding: 50px;
 		font-size: 1.25rem;
+		margin-bottom: 100px;
 	}
 
 	.card-product .card-header {
