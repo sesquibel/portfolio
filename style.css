@@ -1,45 +1,6 @@
 /* @media screen and (min-width: 480px) and (max-width: 767px) {}
 
-	#skills-titles {
-		width: 30%;
-		border-right: 5px solid #F1F1EE;
-	}
-
-	#skills-titles, #skills-level {
-		margin-bottom: 30px;
-	}
-
-	#skills-progress-bar {
-		width: 100%;
-		margin-left: 30px;
-	}
-
-	#skills-progress-bar .progress-bar {
-		height: 25px;
-		margin-bottom: 50px;
-		border: 1px solid #F1F1EE;
-		border-radius: 8px;
-	}
-
-	#html-progress, #css-progress, #javascript-progress, 
-	#bootstrap-progress, #git-progress, #wordpress-progress,
-	#ember-progress, #react-progress {
-		background-color: #CFC715;
-		height: 100%;
-		border-radius: 8px 0 0 8px;
-	}  
-
-	#html-progress, #css-progress, #bootstrap-progress {
-		width: 65%;
-	}
-
-	#javascript-progress, #git-progress, #ember-progress {
-		width: 50%;
-	}
 	
-	#wordpress-progress, #react-progress {
-		width: 35%;
-	}
 
 	#contact {
 		background-color: #34385e;

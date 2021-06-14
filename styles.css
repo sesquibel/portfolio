@@ -35,12 +35,7 @@ h2 {
 
 a {
 	font-size: 1.5rem;
-}
-
-a:hover {
-	color: #CFC715;
-	font-style: italic;
-	cursor: pointer;
+	text-decoration: none;
 }
 
 /** HEADER/NAV SECTION *************************/
@@ -61,7 +56,7 @@ nav a {
 main {
 	grid-area: "main";
 
-	grid-template-rows: 1.5fr 1.5fr 2fr 1fr;
+	grid-template-rows: 1.25fr 1.5fr 1.85fr 1fr;
 	grid-template-areas:
 		"hero"
 		"projects"
@@ -128,55 +123,192 @@ main {
 }
 
 #bio {
-	display: flex; 
 	padding: 50px; 		
-	margin-bottom: 200px;
-}
-
-#bio-img {
-	display: flex;
-	justify-content: center;
-	width: 40%;
+	margin-bottom: 100px;
 }
 
 #bio-img img {
+	max-width: 100%;
+}
+
+#bio-text {
+	line-height: 2;
+	letter-spacing: 0.2rem;
+	font-size: 2rem;
+	padding: 50px;
+}
+
+#bio-text h3 {
+	font-size: 3rem;
+	padding-bottom: 0;
+}
+
+#bio-text p {
+	font-weight: 100;
+	padding-top: 0;
+}
+
+/** SKILLS SECTION *****************************/
+#skills {
+	padding: 0 100px;
+}
+
+#skills-titles h3 {
+	margin-bottom: 52px;
+}
+
+#skills-titles {
+	width: 30%;
+	border-right: 5px solid #F1F1EE;
+}
+
+#skills-titles, #skills-level {
+	margin-bottom: 30px;
+}
+
+#skills-progress-bar {
+	width: 100%;
+	margin-left: 30px;
+}
+
+#skills-progress-bar .progress-bar {
+	height: 25px;
+	margin-bottom: 50px;
+	border: 1px solid #F1F1EE;
+	border-radius: 8px;
+}
+
+#html-progress, #css-progress, #javascript-progress, 
+#bootstrap-progress, #git-progress, #wordpress-progress,
+#ember-progress, #react-progress {
+	background-color: #CFC715;
+	height: 100%;
+	border-radius: 8px 0 0 8px;
+}  
+
+#html-progress, #css-progress, #bootstrap-progress {
+	width: 65%;
+}
+
+#javascript-progress, #git-progress, #ember-progress {
+	width: 50%;
+}
+
+#wordpress-progress, #react-progress {
+	width: 35%;
+}
+
+/** CONTACT SECTION ****************************/
+#contact {
+	grid-area: "footer";
+	text-align: center;
+}
+
+#contact h3 {
+	font-weight: 700;
+	font-size: 4.25rem;
+}
+
+.card-product {
+	border-radius: 10px;
+	width: 45%;
+	height: 60%;
+	font-size: 1.25rem;
+	margin-bottom: 150px;  
+}
+
+.card-product .card-header {
+	bottom: 90px;
+	left: 100px;
+	height: 200px;
+	width: 200px;
+	border-bottom: 1px solid #333;
+	border-radius: 50%;
+}
+
+.card-product i {
+	margin-top: 23px;
+	border: 0.2rem solid #333;
+	border-radius: 50%;
+	padding: 20px;
+}
+
+.card-product .card-body {
+	display: flex;
+	align-items: center;
+}
+
+.card-product .card-body p {
+	position: relative;
+	bottom: 80px;
+}
+
+#contact h4 {
+	margin: 100px 0 125px 0;
+	font-weight: 400;
+	font-size: 1.75rem;
+}
+
+#contact-business-card {
+	display: flex;
+	justify-content: center;
+}
+
+#business-card {
+	height: 400px;
+	width: 800px;
+	border-radius: 3px;
+	background: linear-gradient(#F1F1EE, #bb371a);
+	color: #333;
 	box-shadow: 
 	rgba(0, 0, 0, 0.25) 0px 54px 55px, 
 	rgba(0, 0, 0, 0.12) 0px -12px 30px, 
 	rgba(0, 0, 0, 0.12) 0px 4px 6px, 
 	rgba(0, 0, 0, 0.17) 0px 12px 13px, 
 	rgba(0, 0, 0, 0.09) 0px -3px 5px;
-	max-width: 80%;
 }
 
-#bio-text {
+#business-card .card-body {
+	display: flex;
+	height: 80%;
+}
+
+#left, #right {
+	width: 50%;
+}
+
+#right {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	line-height: 2;
-	letter-spacing: 0.2rem;
-	font-size: 1.35rem;
-	width: 50%;
-	padding-right: 50px;
+	font-size: 1.5rem;
 }
 
-#bio-text h3 {
-	font-size: 3rem;
-	font-weight: 200;
-	margin-bottom: 0;
-	margin-top: 0;
+#business-card .card-footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 20%;
+	background-color: #333;
+	font-size: 1.45rem;
 }
 
-#bio-text p {
-	font-weight: 100;
+.card-body img {
+	max-width: 100%;
 }
-
-#about {
-	grid-area: "about";
-}
-
-/** SKILLS SECTION *****************************/
-
-/** CONTACT SECTION ****************************/
 
 /** FOOTER SECTION *****************************/
+footer p {
+	padding-left: 15px;
+}
+
+/** @media and screen (min-width: 767px) and (max-width: 1023px) {
+	a:hover {
+	background-color: #F1F1EE;
+	color: #CFC715;
+	font-style: italic;
+	cursor: pointer;
+	}
+}
+
+/** @media and screen (min-width: 1024px) {}
