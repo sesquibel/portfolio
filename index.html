@@ -4,22 +4,24 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="A website displaying projects, biography, and a contact sections for Samuel Esquibel's Portfolio.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="util.css">
 	<link rel="stylesheet" href="styles.css">
-	<script src="https://kit.fontawesome.com/e2aec2a8c5.js" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
-	<script src="script.js" defer></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+	<script src="https://kit.fontawesome.com/e2aec2a8c5.js" crossorigin="anonymous" defer></script>
 	<title>Samuel Esquibel | Portfolio</title>
 </head>
 
 <body class="bg-blue text-white d-grid">
 	<header>
 		<div></div>
-		<nav class="d-flex just-center ls-none">
-			<li><a href="#projects" class="text-white">Projects</a></li>
-			<li><a href="#about" class="text-white">About</a></li>
-			<li><a href="#contact" class="text-white">Contact</a></li>
+		<nav>
+			<ul class="d-flex just-center ls-none">
+				<li><a href="#projects" class="text-white" aria-roledescription="link" aria-label="Jump to projects section of website" title="Jump to projects section of website">Projects</a></li>
+				<li><a href="#about" class="text-white" aria-roledescription="link" aria-label="Jump to about section of website" title="Jump to about section of website">About</a></li>
+				<li><a href="#contact" class="text-white" aria-roledescription="link" aria-label="Jump to contact section of website" title="Jump to contact section of website">Contact</a></li>
+			</ul>
 		</nav>
 	</header>
 	<main class="d-grid">
@@ -65,7 +67,7 @@
 			<h2 class="text-yellow text-center text-uppercase">About</h2>
 			<article id="bio">
 				<div id="bio-img" class="d-flex just-center">
-					<img src="/assets/Samuel-Esquibel_Headshot.jpg" class="box-shadow" alt="bio picture">
+					<img src="/assets/Samuel-Esquibel_Headshot_400x400.jpg" srcset="Samuel-Esquibel_Headshot_400x400.jpg 768w, Samuel-Esquibel_Headshot_800x800.jpg 1024w" sizes="50vw"class="box-shadow" alt="bio picture">
 				</div>
 				<div id="bio-text" class="d-flex column just-center">
 					<h3 class="text-center">Samuel Esquibel</h3>
@@ -130,7 +132,7 @@
 		<section id="contact" class="bg-purple">
 			<div id="contact-title">
 				<h2 class="text-yellow text-center text-uppercase">Contact</h2>
-				<h3>Need help <span class="text-purple">designing</span> and <span class="text-red">building</span> a website?!</h3>
+				<h3>Need help <span class="text-redder">designing</span> and <span class="text-yellow">building</span> a website?!</h3>
 				<h4>We offer the following services:</h4>
 			</div>
 			<div id="products" class="d-flex wrap just-around">
@@ -176,17 +178,17 @@
 				</div>
 			</div>
 			<div id="contact-business-card">
-				<div id="business-card">
-					<div class="card-body">
+				<div id="business-card" class="box-shadow text-black">
+					<div class="card-body d-flex">
 						<div id="left">
 							<img src="assets/luckyRam_designs_transparent.png" alt="luck ram design logo">
 						</div>
-						<div id="right">
+						<div id="right" class="d-flex column just-center">
 							<p>Samuel Esquibel</p>
 							<p><a href="mailto:sesquibel@luckyram.io" class="text-black">sesquibel@luckyram.io</a></p>
 						</div>
 					</div>
-					<div class="card-footer">
+					<div class="card-footer d-flex a-items-center just-center bg-black">
 						<p class="text-white">Shoot us an email with the project details and timeline to get started!</p>
 					</div>
 				</div>
