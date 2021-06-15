@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	max-width: 100%;
 	font-family: 'Open Sans', serif;
 	font-size: 16px;
 	background-size: cover;
@@ -30,24 +31,10 @@ header {
 	display: none;
 }
 
-/* header {
-	grid-area: "header";
-	padding: 50px;
-	border-bottom: 3px solid #F1F1EE;
-}
-
-nav li {
-	padding: 0 40px;
-}
-
-nav a {
-	font-size: 5rem;
-} */
-
 main {
 	grid-area: "main";
 
-	grid-template-rows: 1.25fr 1.5fr 1.85fr 1fr;
+	grid-template-rows: 1.5fr 1.5fr 2.7fr 2.6fr;
 	grid-template-areas:
 		"hero"
 		"projects"
@@ -94,7 +81,7 @@ main {
 	width: 900px;
 	height: 450px;
 	padding: 25px;
-	margin: 60px 0;
+	margin: 25px 50px;
 }
 
 #projects-card-deck .card h3 {
@@ -112,12 +99,11 @@ main {
 
 #bio {
 	padding: 50px; 		
-	margin-bottom: 100px;
 }
 
 #bio-img img {
-	width: 400px;
-	height: 400px;
+	width: 800px;
+	height: 800px;
 	max-width: 100%;
 }
 
@@ -139,7 +125,7 @@ main {
 }
 
 #skills {
-	padding: 0 100px;
+	padding: 0 100px 150px;
 }
 
 #skills-titles h3 {
@@ -199,7 +185,7 @@ main {
 
 .card-product {
 	border-radius: 10px;
-	width: 45%;
+	width: 35%;
 	height: 60%;
 	font-size: 1.25rem;
 	margin-bottom: 150px;  
@@ -207,27 +193,26 @@ main {
 
 .card-product .card-header {
 	bottom: 90px;
-	left: 100px;
-	height: 200px;
-	width: 200px;
+	left: 80px;
+	height: 175px;
+	width: 175px;
 	border-bottom: 1px solid #333;
 	border-radius: 50%;
 }
 
 .card-product i {
-	margin-top: 23px;
+	margin-top: 19px;
 	border: 0.2rem solid #333;
 	border-radius: 50%;
-	padding: 20px;
+	padding: 35px;
 }
 
-.card-product .card-body {
-	display: flex;
-	align-items: center;
+.card-body {
+	padding: 50px;
+	font-size: 2rem;
 }
 
 .card-product .card-body p {
-	position: relative;
 	bottom: 80px;
 }
 
@@ -235,11 +220,6 @@ main {
 	margin: 100px 0 125px 0;
 	font-weight: 400;
 	font-size: 1.75rem;
-}
-
-#contact-business-card {
-	display: flex;
-	justify-content: center;
 }
 
 #business-card {
@@ -277,15 +257,46 @@ main {
 }
 
 footer p {
-	padding-left: 15px;
+	padding: 15px;
+	font-size: 1.5rem;
 }
 
-/** @media and screen (min-width: 767px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	body {
+	grid-template-rows: 200px 1fr 75px;
+	grid-template-areas:
+	"header"
+    "main"
+    "footer";
+	}
+	
 	a:hover {
-	background-color: #F1F1EE;
-	color: #CFC715;
-	font-style: italic;
-	cursor: pointer;
+		background-color: #F1F1EE;
+		color: #CFC715;
+		font-style: italic;
+		cursor: pointer;
+	}	
+
+	header {
+		grid-area: "header";
+		display: flex;
+		padding: 50px;
+	}
+
+	nav li {
+		padding: 0 40px;
+	}
+
+	nav a {
+		font-size: 5rem;
+	} 
+
+	#hero h1 {
+		font-size: 6rem;
+	}
+	
+	#hero p {
+		font-size: 4rem;
 	}
 }
 
