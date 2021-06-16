@@ -2,10 +2,6 @@
 	box-sizing: border-box;
 }
 
-.relative {
-	position: relative;
-}
-
 .d-grid {
 	display: grid;
 }
@@ -34,10 +30,6 @@
 	justify-content: space-around;
 }
 
-.just-evenly {
-	justify-content: space-evenly;
-}
-
 .a-items-center {
 	align-items: center;
 }
@@ -56,10 +48,6 @@
 
 .text-blue {
 	color: #0D5D82;
-}
-
-.text-purple {
-	color: #34385e;
 }
 
 .text-red {
@@ -98,14 +86,6 @@
 	background-color: #34385e;
 }
 
-.bg-red {
-	background-color: #bb371a;
-}
-
-.bg-yellow {
-	background-color: #CFC715;
-}
-
 .box-shadow {
 	box-shadow: 
 		rgba(0, 0, 0, 0.25) 0px 54px 55px, 
@@ -113,9 +93,5 @@
 		rgba(0, 0, 0, 0.12) 0px 4px 6px, 
 		rgba(0, 0, 0, 0.17) 0px 12px 13px, 
 		rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
-.ls-none {
-	list-style: none;
 }
 
