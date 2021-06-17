@@ -7,8 +7,9 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 
-	grid-template-rows: 1fr 75px;
+	grid-template-rows: 100px 1fr 75px;
 	grid-template-areas:
+		"header"
     "main"
     "footer";
 }
@@ -28,7 +29,7 @@ a {
 }
 
 header {
-	display: none;
+	visibility: hidden;
 }
 
 main {
@@ -61,7 +62,7 @@ main {
 	animation: 750ms infinite alternate bounce; 
 }
 
-#down-arrow span {
+#down-arrow span i {
 	font-size: 15rem;
 }
 

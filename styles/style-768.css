@@ -1,9 +1,9 @@
 
 @media screen and (min-width: 480px) and (max-width: 1023px) {
 	body {
-	grid-template-rows: 200px 1fr 75px;
+	grid-template-rows: 100px 1fr 75px;
 	grid-template-areas:
-	"header"
+		"header"
     "main"
     "footer";
 	}
@@ -16,24 +16,44 @@
 	}	
 
 	header {
+		visibility: visible;
 		grid-area: "header";
-		display: flex;
-		padding: 50px;
+		padding: 25px;
+		border-bottom: 1px solid #F1F1EE;
+
+		justify-content: center;
+		align-items: center;
 	}
+
+	header ul { list-style: none;}
 
 	nav li {
 		padding: 0 40px;
 	}
 
 	nav a {
-		font-size: 5rem;
+		font-size: 2rem;
+		text-decoration: none;
 	} 
+
+	#hero {
+		padding: 100px;
+	}
 
 	#hero h1 {
 		font-size: 6rem;
+		margin-bottom: 0;
 	}
 	
 	#hero p {
-		font-size: 4rem;
+		font-size: 3.5rem;
+	}
+
+	#down-arrow {
+		padding-top: 150px;
+	}
+
+	#down-arrow span i {
+		font-size: 10rem;
 	}
 }
