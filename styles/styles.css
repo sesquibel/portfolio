@@ -10,8 +10,8 @@ body {
 	grid-template-rows: 100px 1fr 75px;
 	grid-template-areas:
 		"header"
-    "main"
-    "footer";
+		"main"
+		"footer";
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -103,8 +103,8 @@ main {
 }
 
 #bio-img img {
-	width: 800px;
-	height: 800px;
+	width: 700px;
+	height: 700px;
 	max-width: 100%;
 }
 
